@@ -1,6 +1,6 @@
 {
   "name": "@proggarapsody/cgapi",
-  "version": "0.0.1-beta",
+  "version": "0.0.1",
   "description": "",
   "module": "./lib/index.js",
   "exports": "./lib/index.js",
@@ -15,7 +15,7 @@
     "commit": "git-cz",
     "tsc": "tsc -p tsconfig.json",
     "dev": "ts-node src/index.ts",
-    "prerelease": "git checkout main && git pull origin main && npm i && run-s validate styleguide:build && git-authors-cli && git add .",
+    "prerelease": "git checkout main && git pull origin main && git-authors-cli && git add .",
     "release": "standard-version -a",
     "postrelease": "run-s release:*",
     "dev:debug": "nodemon -I --exec node --inspect=4321 --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts",
@@ -86,5 +86,8 @@
   "dependencies": {
     "commander": "^9.4.1",
     "dotenv": "^16.0.3"
-  }
+  },
+  "contributors": [
+    "Aleksey <klimenkoaleksey02@gmail.com>"
+  ]
 }
