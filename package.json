@@ -1,6 +1,6 @@
 {
   "name": "@proggarapsody/cgapi",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "module": "./lib/index.js",
   "exports": "./lib/index.js",
@@ -17,7 +17,7 @@
     "dev": "ts-node src/index.ts",
     "prerelease": "git checkout main && git pull origin main && git-authors-cli && git add .",
     "release": "standard-version -a",
-    "postrelease": "run-s release:*",
+    "postrelease": "run-s release:* && npm publish",
     "release:tags": "git push --follow-tags origin main",
     "dev:debug": "nodemon -I --exec node --inspect=4321 --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts",
     "prepublishOnly": "npm run tsc",
