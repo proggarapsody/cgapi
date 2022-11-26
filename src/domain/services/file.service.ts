@@ -10,11 +10,8 @@ import { injectable } from 'inversify'
 
 import type { IFileService } from '../interfaces/file-service.interface.js'
 
-
-
 @injectable()
 export class FileService implements IFileService {
-
   private readonly dirname = dirname(fileURLToPath(import.meta.url))
 
   public async writeFile(filePath: string, data: Object | string) {
@@ -55,6 +52,9 @@ export class FileService implements IFileService {
     }
   ) {
     const cwd = options?.cwd || process.cwd()
+    console.log(cwd)
+    
+
     try {
       return await glob(filePath, {
         cwd,
