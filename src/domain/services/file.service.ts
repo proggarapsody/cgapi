@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 import fs from 'node:fs/promises'
-import path from 'node:path'
+import path, { dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 import chalk from 'chalk'
 import globSync from 'glob'
@@ -9,8 +10,13 @@ import { injectable } from 'inversify'
 
 import type { IFileService } from '../interfaces/file-service.interface.js'
 
+
+
 @injectable()
 export class FileService implements IFileService {
+
+  private readonly dirname = dirname(fileURLToPath(import.meta.url))
+
   public async writeFile(filePath: string, data: Object | string) {
     const fullPath = path.resolve(process.cwd(), filePath)
     try {
@@ -36,6 +42,10 @@ export class FileService implements IFileService {
       console.error(error)
       return null
     }
+  }
+
+  public getLibDirname() {
+    return this.dirname
   }
 
   public async findFile(

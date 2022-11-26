@@ -1,0 +1,1 @@
+{"apiFile":"./test/base.api.ts","apiImport":"baseApi","schemaFile":"","flattenArg":true,"outputFiles":{"./test/test.api.ts":{"filterEndpoints":""}},"hooks":true,"tag":true}

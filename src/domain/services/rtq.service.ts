@@ -79,7 +79,10 @@ export class RtqService implements IGenerator {
    */
   private async getDefaultGqlBaseApiPath(): Promise<string> {
     const defaultGqlApiPath = await this._fileService.findFile(
-      `**/data/rtq/${ConstantsHelper.DEFAULT_GQL_BASEAPI_NAME}`
+      `**/data/rtq/${ConstantsHelper.DEFAULT_GQL_BASEAPI_NAME}`,
+      {
+        cwd: this._fileService.getLibDirname(),
+      }
     )
     if (!defaultGqlApiPath || defaultGqlApiPath.length === 0) {
       throw new Error(chalk.red('ERROR[app]: default gql base-api file has not founded.'))
@@ -103,8 +106,13 @@ export class RtqService implements IGenerator {
    */
   private async getDefaultOpenapiBaseApiPath(): Promise<string> {
     const defaultOpenapiPath = await this._fileService.findFile(
-      `**/data/rtq/${ConstantsHelper.DEFAULT_OPENAPI_BASEAPI_NAME}`
+      `**/data/rtq/${ConstantsHelper.DEFAULT_OPENAPI_BASEAPI_NAME}`,
+      {
+        cwd: this._fileService.getLibDirname(),
+      }
     )
+    console.log('PATH:', defaultOpenapiPath)
+
     if (!defaultOpenapiPath || defaultOpenapiPath.length === 0) {
       throw new Error('ERROR[app]: default openapi base-api file has not founded.\n')
     }
