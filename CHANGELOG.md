@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/proggarapsody/cgapi/compare/v0.0.4...v0.0.5) (2022-11-26)
+
+
+### Features
+
+* add console log ([75cc51e](https://github.com/proggarapsody/cgapi/commit/75cc51ee76a2783fdaee6005e610bd9ee453ca82))
+
 ### [0.0.4](https://github.com/proggarapsody/cgapi/compare/v0.0.3...v0.0.4) (2022-11-23)
 
 ### [0.0.3](https://github.com/proggarapsody/cgapi/compare/v0.0.2...v0.0.3) (2022-11-23)
