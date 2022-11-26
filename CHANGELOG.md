@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/proggarapsody/cgapi/compare/v0.0.6...v0.0.7) (2022-11-26)
+
+
+### Features
+
+* edit find cwd path ([39013dc](https://github.com/proggarapsody/cgapi/commit/39013dca7d8747607b0e39993d914956e90e9e55))
+
 ### [0.0.6](https://github.com/proggarapsody/cgapi/compare/v0.0.5...v0.0.6) (2022-11-26)
 
 
