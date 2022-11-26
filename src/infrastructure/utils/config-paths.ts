@@ -38,7 +38,14 @@ export class DefaultConfigsHelper {
     switch (type) {
       case 'rtk-query': {
         return (await import(`${this.dataPath}rtq/api-default.config.js`).then(
-          (res) => res.default
+          (res) => {
+            console.log(`${this.dataPath}rtq/api-default.config.js`);
+            
+            console.log(res);
+            console.log(res.default)
+            
+            return res.default
+          }
         )) as ConfigFile
       }
       case 'react-query': {

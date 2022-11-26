@@ -76,12 +76,14 @@ export class FileService implements IFileService {
     const fullFromPath = path.resolve(process.cwd(), from)
     const fullToPath = path.resolve(process.cwd(), to)
 
+    console.log(fullFromPath)
+    console.log(fullToPath)
     try {
       await fs.mkdir(path.dirname(fullToPath), { recursive: true })
 
       await fs.cp(fullFromPath, fullToPath, { force: false })
     } catch (error) {
-      console.error(chalk.red('ERROR: file has not been copied'))
+      console.log(chalk.red('ERROR: file has not been copied'))
       throw new Error(error as any)
     }
   }
