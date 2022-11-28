@@ -72,6 +72,7 @@ export class FileService implements IFileService {
   ) {
     const cwd = options?.cwd || process.cwd()
     console.log('process.cwd:', process.cwd())
+    console.log('__dirname', dirname(fileURLToPath(import.meta.url)))
 
     try {
       return globSync.sync(filePath, {
