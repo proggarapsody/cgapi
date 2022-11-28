@@ -57,6 +57,8 @@ export class FileService implements IFileService {
         : process.cwd()
 
     console.log(cwd)
+    console.log(filePath);
+    
     // console.log('process.cwd:', process.cwd())
     // console.log('__dirname', dirname(fileURLToPath(import.meta.url)))
 
