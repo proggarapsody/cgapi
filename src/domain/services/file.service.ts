@@ -53,7 +53,6 @@ export class FileService implements IFileService {
   ) {
     const cwd = options?.cwd || process.cwd()
     console.log(cwd)
-    
 
     try {
       return await glob(filePath, {
@@ -72,6 +71,8 @@ export class FileService implements IFileService {
     }
   ) {
     const cwd = options?.cwd || process.cwd()
+    console.log('process.cwd:', process.cwd())
+
     try {
       return globSync.sync(filePath, {
         cwd,
