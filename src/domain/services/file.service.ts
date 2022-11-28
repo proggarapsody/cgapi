@@ -48,11 +48,17 @@ export class FileService implements IFileService {
   public async findFile(
     filePath: string,
     options?: {
-      cwd?: string
+      rule: 'user' | 'lib'
     }
   ) {
-    const cwd = options?.cwd || process.cwd()
+    const cwd =
+      options?.rule == 'lib'
+        ? path.resolve('../../', this.getLibDirname())
+        : process.cwd()
+
     console.log(cwd)
+    // console.log('process.cwd:', process.cwd())
+    // console.log('__dirname', dirname(fileURLToPath(import.meta.url)))
 
     try {
       return await glob(filePath, {
@@ -71,8 +77,6 @@ export class FileService implements IFileService {
     }
   ) {
     const cwd = options?.cwd || process.cwd()
-    console.log('process.cwd:', process.cwd())
-    console.log('__dirname', dirname(fileURLToPath(import.meta.url)))
 
     try {
       return globSync.sync(filePath, {
