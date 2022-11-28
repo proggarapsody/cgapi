@@ -53,7 +53,7 @@ export class FileService implements IFileService {
   ) {
     const cwd =
       options?.rule == 'lib'
-        ? path.resolve('../../', this.getLibDirname())
+        ? path.resolve(this.getLibDirname(), '../../')
         : process.cwd()
 
     console.log(cwd)

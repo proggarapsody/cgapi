@@ -7,7 +7,7 @@ export declare class FileService implements IFileService {
     }): string | null;
     getLibDirname(): string;
     findFile(filePath: string, options?: {
-        cwd?: string;
+        rule: 'user' | 'lib';
     }): Promise<string[] | null>;
     findFileSync(filePath: string, options?: {
         cwd?: string;

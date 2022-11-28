@@ -1,6 +1,6 @@
 {
   "name": "@proggarapsody/cgapi",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "",
   "module": "./lib/index.js",
   "exports": "./lib/index.js",

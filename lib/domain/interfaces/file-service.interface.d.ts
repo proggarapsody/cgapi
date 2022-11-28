@@ -1,6 +1,6 @@
 export interface IFileService {
     findFile: (pattern: string, options?: {
-        cwd?: string;
+        rule: 'user' | 'lib';
     }) => Promise<string[] | null>;
     findFileSync: (pattern: string) => string[] | null;
     readFile: (path: string) => string | null;
