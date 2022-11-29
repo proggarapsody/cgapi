@@ -117,7 +117,7 @@ export class RtqService implements IGenerator {
     console.log('PATH:', defaultOpenapiPath)
 
     if (!defaultOpenapiPath || defaultOpenapiPath.length === 0) {
-      throw new Error('ERROR[app]: default openapi base-api file has not founded.\n')
+      throw new Error('ERROR[app]: default openapi base-api file has not found.\n')
     }
     return defaultOpenapiPath[0]
   }
