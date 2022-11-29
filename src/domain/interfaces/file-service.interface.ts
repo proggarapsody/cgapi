@@ -3,6 +3,7 @@ export interface IFileService {
     pattern: string,
     options?: {
       rule: 'user' | 'lib'
+      full?: boolean
     }
   ) => Promise<string[] | null>
   findFileSync: (pattern: string) => string[] | null

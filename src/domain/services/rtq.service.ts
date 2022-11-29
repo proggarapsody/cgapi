@@ -81,7 +81,8 @@ export class RtqService implements IGenerator {
     const defaultGqlApiPath = await this._fileService.findFile(
       `**/rtq/${ConstantsHelper.DEFAULT_GQL_BASEAPI_NAME}`,
       {
-        rule: 'lib'
+        rule: 'lib',
+        full: true,
       }
     )
     if (!defaultGqlApiPath || defaultGqlApiPath.length === 0) {
@@ -109,9 +110,10 @@ export class RtqService implements IGenerator {
       `**/rtq/${ConstantsHelper.DEFAULT_OPENAPI_BASEAPI_NAME}`,
       {
         rule: 'lib',
+        full: true,
       }
     )
-    
+
     console.log('PATH:', defaultOpenapiPath)
 
     if (!defaultOpenapiPath || defaultOpenapiPath.length === 0) {

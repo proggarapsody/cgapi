@@ -49,6 +49,7 @@ export class FileService implements IFileService {
     filePath: string,
     options?: {
       rule: 'user' | 'lib'
+      full?: boolean
     }
   ) {
     const cwd =
@@ -63,9 +64,18 @@ export class FileService implements IFileService {
     // console.log('__dirname', dirname(fileURLToPath(import.meta.url)))
 
     try {
-      return await glob(filePath, {
+      const res = await glob(filePath, {
         cwd,
       })
+
+      if (res) {
+        if (options?.full) {
+          return res.map((item) => path.resolve(cwd, item))
+        }
+        return res
+      }
+
+      return []
     } catch (error) {
       console.error(error)
       return null
