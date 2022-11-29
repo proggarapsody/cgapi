@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/proggarapsody/cgapi/compare/v0.0.12...v0.0.13) (2022-11-29)
+
+
+### Bug Fixes
+
+* js to ts extension ([3d687c5](https://github.com/proggarapsody/cgapi/commit/3d687c57a12af086fe25e4a16bf8c7e63d0979bb))
+
 ### [0.0.12](https://github.com/proggarapsody/cgapi/compare/v0.0.11...v0.0.12) (2022-11-28)
 
 ### [0.0.11](https://github.com/proggarapsody/cgapi/compare/v0.0.10...v0.0.11) (2022-11-28)
