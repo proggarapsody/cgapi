@@ -111,6 +111,7 @@ export class RtqService implements IGenerator {
         rule: 'lib',
       }
     )
+    
     console.log('PATH:', defaultOpenapiPath)
 
     if (!defaultOpenapiPath || defaultOpenapiPath.length === 0) {
