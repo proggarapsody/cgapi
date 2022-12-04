@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/proggarapsody/cgapi/compare/v0.0.16...v0.0.17) (2022-12-04)
+
+
+### Bug Fixes
+
+* add await to generate endpoints ([13ebc4f](https://github.com/proggarapsody/cgapi/commit/13ebc4f90554f65ce287be50d4fb121550adba7a))
+
 ### [0.0.16](https://github.com/proggarapsody/cgapi/compare/v0.0.15...v0.0.16) (2022-12-04)
 
 
