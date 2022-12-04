@@ -167,18 +167,21 @@ export class RtqService implements IGenerator {
 
     await this.getOpenapiBaseApiPath()
 
-    // await parseConfig({
-    //   ...config,
-    //   schemaFile: isPostman ? ConstantsHelper.POSTMAN_OPENAPI : config.schemaFile,
-    // }).forEach(async (el) => {
-    //   console.log(el)
-    //   const { outputFile } = el
-    //   generateEndpoints({ ...el, outputFile })
-    // })
-    parseConfig({
-      ...config,
-      schemaFile: isPostman ? ConstantsHelper.POSTMAN_OPENAPI : config.schemaFile,
-    })
+    await Promise.all(
+      parseConfig({
+        ...config,
+        schemaFile: isPostman ? ConstantsHelper.POSTMAN_OPENAPI : config.schemaFile,
+      }).map(async (el) => {
+        console.log(el)
+        await generateEndpoints(el)
+      })
+    )
+    // generateEndpoints(
+    //   parseConfig({
+    //     ...config,
+    //     schemaFile: isPostman ? ConstantsHelper.POSTMAN_OPENAPI : config.schemaFile,
+    //   })
+    // )
   }
 
   private async generateGraphql() {
