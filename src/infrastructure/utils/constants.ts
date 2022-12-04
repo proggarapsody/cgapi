@@ -13,7 +13,7 @@ export class ConstantsHelper {
 
   public static readonly DEFAULT_OPENAPI_BASEAPI_NAME = 'openapi-default.api.js'
 
-  public static readonly GRAPH_QL_TYPES = 'types.generated.js'
+  public static readonly GRAPH_QL_TYPES = 'types.generated.ts'
 
   public static readonly POSTMAN_COLLECTION = 'postman-collection.json'
 

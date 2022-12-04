@@ -165,14 +165,19 @@ export class RtqService implements IGenerator {
       )
     }
 
-    const openapiBaseApiPath = this.getOpenapiBaseApiPath()
+    await this.getOpenapiBaseApiPath()
 
+    // await parseConfig({
+    //   ...config,
+    //   schemaFile: isPostman ? ConstantsHelper.POSTMAN_OPENAPI : config.schemaFile,
+    // }).forEach(async (el) => {
+    //   console.log(el)
+    //   const { outputFile } = el
+    //   generateEndpoints({ ...el, outputFile })
+    // })
     parseConfig({
       ...config,
       schemaFile: isPostman ? ConstantsHelper.POSTMAN_OPENAPI : config.schemaFile,
-    }).forEach((el) => {
-      const { outputFile } = el
-      generateEndpoints({ ...el, outputFile })
     })
   }
 
