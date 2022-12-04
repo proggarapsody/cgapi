@@ -18,7 +18,7 @@
     "dev:debug": "nodemon -I --exec node --inspect=4321 --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts",
     "prepublishOnly": "npm run tsc",
     "lint:fix": "eslint ./src --fix",
-    "acp": "git add . && npm run commit && git push",
+    "acp": "npm run lint:fix && git add . && npm run commit && git push",
     "semantic-release": "semantic-release --branches main"
   },
   "keywords": [],

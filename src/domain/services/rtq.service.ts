@@ -176,8 +176,7 @@ export class RtqService implements IGenerator {
         await generateEndpoints(el)
       })
     )
-    
-  
+
     // generateEndpoints(
     //   parseConfig({
     //     ...config,
