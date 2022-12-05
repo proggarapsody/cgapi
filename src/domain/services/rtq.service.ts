@@ -368,7 +368,7 @@ export class RtqService implements IGenerator {
       apiImport: 'baseApi',
       outputFiles: {
         [`./${apiPath}/test.api.ts`]: {
-          filterEndpoints: '',
+          filterEndpoints: [/.*/],
         },
       },
       schemaFile: apiUrl,

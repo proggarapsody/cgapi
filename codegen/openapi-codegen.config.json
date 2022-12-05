@@ -1,13 +1,11 @@
 {
-  "apiFile": "test/base.api.ts",
+  "apiFile": "./test/base.api.ts",
   "apiImport": "baseApi",
   "schemaFile": "http://135.181.216.90:49158/api-json",
   "flattenArg": true,
-  "outputFiles": {
-    "test/test.api.ts": {
-      "filterEndpoints": ["admin"]
-    }
-  },
+  "outputFile": "test/test.api.ts"
+    
+  ,
   "hooks": true,
   "tag": true
 }
