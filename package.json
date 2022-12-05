@@ -19,7 +19,7 @@
     "prepublishOnly": "npm run tsc",
     "lint:fix": "eslint ./src --fix",
     "acp": "npm run lint:fix && git add . && npm run commit && git push",
-    "semantic-release": "semantic-release -p @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/npm @semantic-release/github @semantic-release/changelog"
+    "semantic-release": "semantic-release -p @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/npm @semantic-release/github @semantic-release/changelog -b main"
   },
   "keywords": [
     "codegen",
