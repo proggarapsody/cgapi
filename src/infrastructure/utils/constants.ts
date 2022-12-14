@@ -1,7 +1,7 @@
 export class ConstantsHelper {
   public static readonly GRAPH_QL_CONFIG_NAME = 'graphql-codegen.config.js'
 
-  public static readonly API_CONFIG_NAME = 'openapi-codegen.config.js'
+  public static readonly API_CONFIG_NAME = 'openapi-codegen.config.ts'
 
   public static readonly CGAPI_CONFIG_NAME = 'cgapi.config.json'
 

@@ -56,10 +56,12 @@ export class RtqService implements IGenerator {
    * It reads a file and returns the contents of the file as a JSON object.
    * @returns {ConfigFile} The openapi config file.
    */
-  private getOpenapiConfig(): ConfigFile {
-    const config = this._fileService.readFile(
+  private async getOpenapiConfig(): Promise<ConfigFile> {
+    const config = await import(
       this.mainConfig.configPath + ConstantsHelper.API_CONFIG_NAME
-    )
+    ).then((res) => res.default)
+
+    console.log(config)
 
     if (!config) {
       throw new Error(
@@ -69,7 +71,7 @@ export class RtqService implements IGenerator {
       )
     }
 
-    return JSON.parse(config) as ConfigFile
+    return config as ConfigFile
   }
 
   /**
@@ -155,7 +157,9 @@ export class RtqService implements IGenerator {
     }
 
     // 1 check if base api file exist in api path + ConstantsHelper.BASE_RTQ_API_NAME
-    const config = this.getOpenapiConfig()
+    const config = await this.getOpenapiConfig()
+
+    console.log('CONFIG:', config)
 
     if (!config.schemaFile && !isPostman) {
       throw new Error(
